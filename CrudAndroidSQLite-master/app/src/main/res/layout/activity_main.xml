@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.frank.crudandroidsqlite.MainActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:onClick="chamarTelaCadastrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+
+
+    <TextView
+        android:id="@+id/saldo"
+        android:layout_width="93dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="76dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2" />
+
+    <TextView
+        android:id="@+id/saldotext"
+        android:layout_width="104dp"
+        android:layout_height="27dp"
+
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="Saldo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saldo" />
+
+    <ListView
+        android:id="@+id/listaLancamentos"
+        android:layout_width="0dp"
+        android:layout_height="351dp"
+
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/saldo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="60dp"
+        android:text="Cartão"
+        android:onClick="chamarTelaCartao"
+        app:layout_constraintEnd_toStartOf="@+id/saldo"
+        tools:layout_editor_absoluteY="409dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:text="Fatura"
+        app:layout_constraintStart_toEndOf="@+id/saldo"
+        tools:layout_editor_absoluteY="409dp" />
+
+</android.support.constraint.ConstraintLayout>
