@@ -12,28 +12,30 @@ import android.widget.EditText;
 import com.example.frank.crudandroidsqlite.banco.DAOCartao;
 
 public class CadastrarCartao extends AppCompatActivity {
-
+    EditText credito;
+    Cartao cartao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_cartao);
-        
-        Bundle bundle = getIntent().getExtras();
+        credito = (EditText) findViewById(R.id.editTextCredito);
+        cartao = new Cartao();
+       /* Bundle bundle = getIntent().getExtras();
         if(bundle!=null && bundle.containsKey("id")){
             Integer id = 1;
             Log.i("Tela",""+id);
             cartao = new DAOCartao(this).buscarPorId(id);
             editTextCredito.setText(String.valueOf(cartao.getCredito()));
 
-        }
+        }*/
     }
 
 
-        Cartao cartao = new Cartao();
-        EditText editTextCredito;
+
+
 
     public void inserir(View view){
-        cartao.setCredito(Double.parseDouble(editTextCredito.getText().toString()));
+        cartao.setCredito(Double.parseDouble(credito.getText().toString()));
 
 
         if(cartao.getId()==null) {
